@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 var Book = require('./models/bookModel');
 bookRouter = require('./Routes/bookRoutes')(Book);
 
-app.use('/api', bookRouter);
+app.use('/api/Books', bookRouter);
 
 app.get('/', function(req, res) {
 	res.send("Welcome to ReST API");
