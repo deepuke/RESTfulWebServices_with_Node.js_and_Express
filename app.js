@@ -1,13 +1,15 @@
 /**
  * @author 404989
  */
-var express = require('express'), mongoose = require('mongoose');
-bodyParser = require('body-parser');
+var express = require('express'), 
+	mongoose = require('mongoose'), 
+	cors = require('cors'), 
+	bodyParser = require('body-parser');
 
 var db = mongoose.connect('mongodb://localhost/bookAPI');
 
-
 var app = express();
+app.use(cors());
 
 var port = process.env.PORT || 3000;
 
