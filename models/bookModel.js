@@ -14,6 +14,9 @@ var bookModel = new Schema({
 	read : {
 		type : Boolean,
 		default : false
+	},
+	createdDate : {
+		type : String
 	}
 });
 
